@@ -2,8 +2,8 @@ package guru.springframework.spring5webfluxrest.controllers;
 
 import guru.springframework.spring5webfluxrest.domain.Vendor;
 import guru.springframework.spring5webfluxrest.repositories.VendorRepository;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.BDDMockito;
 import org.mockito.Mockito;
 import org.springframework.test.web.reactive.server.WebTestClient;
@@ -16,7 +16,7 @@ public class VendorControllerTest {
     VendorRepository vendorRepository;
     VendorController controller;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         vendorRepository = Mockito.mock(VendorRepository.class);
         controller = new VendorController(vendorRepository);
